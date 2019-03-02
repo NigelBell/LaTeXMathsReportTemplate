@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage{lastpage} % number of last page 
+\usepackage[margin=1in,headheight=13.6pt]{geometry}
+\usepackage{lipsum}
+\usepackage{fancyhdr}
+
+% Set the headings' appearance in the ``fancy'' pagestyle
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO, LE]{\scshape\nouppercase{\leftmark}}
+\fancyfoot[RO, LE]{\thepage}
+
+% The first pages shall be empty, even no page numbering
+\fancypagestyle{plain}{%
+  \renewcommand{\headrulewidth}{0.0pt}%
+  \fancyhf{}%
+}
+	
+\renewcommand\footrule{\begin{minipage}{1\textwidth}
+\hrule width \hsize height 2pt
+\end{minipage}\par}%
+
+\renewcommand\headrule{
+\begin{minipage}{1\textwidth}
+\hrule width \hsize height 2pt 
+\end{minipage}}%
+	
+\lhead{courseName - assignmentName}
+\rhead{name (username)}
+%\lfoot{\today}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+
+\begin{document}
+	\begin{enumerate}
+		\item Answer to question 1:
+			% ========== Just examples, please delete before submitting
+			\begin{itemize}
+				\item Use inline equations for simple math $1+1=2$, and centered equations for more involved or important equations
+					\begin{equation}
+					    a^2 + b^2 = c^2.
+					\end{equation}
+				\item Some people like to write scalars without boldface $x+y=1$ and vectors or matrices in boldface
+					\begin{equation}
+					    \mathbf{A} \mathbf{x} = \mathbf{b}.
+					\end{equation}
+				\item An example of a matrix:
+					\begin{equation}
+					    \mathbf{A} = \left(
+					    \begin{array}{ccc}
+						    3 & -1 & 2 \\ 	
+						    0 & 1 & 2 \\ 
+						    1 & 0 & -1 \\
+						\end{array} 
+						\right).  
+					\end{equation}
+				\item With a labeled equation such as the following:
+					\begin{equation}
+					    \label{accel}
+					    \frac{d^2 x}{d t^2} = a
+					\end{equation}
+					you can refer to the equation later. In equation \ref{accel} we defined acceleration.
+			\end{itemize}
+		\item Answer to question 2:
+			% ========== Just examples, please delete before submitting
+			\begin{enumerate}
+				\item Let $x = 3$
+				\begin{enumerate}
+					\item Equation 1: $1 + x = 4$
+					\item Equation 2: $2 + x = 5$
+					\item Equation 3: $3 + x = 6$
+				\end{enumerate}
+			\end{enumerate}
+		\item Answer to question 3:
+		
+		\item Answer to question 4:
+		
+		\item Answer to question 5:
+		
+		\item Answer to question 6:
+		
+		\item Answer to question 7:
+		
+	\end{enumerate}
+\end{document}
